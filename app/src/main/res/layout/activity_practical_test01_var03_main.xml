@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- [Task A.2] Structura UI principală cu GridLayout pentru cele două câmpuri non-editabile și două butoane incrementare -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="ro.pub.cs.systems.eim.practicaltest01var03.PracticalTest01Var03MainActivity">
+
+    <!-- [Task C.2] Buton pentru navigare către activitatea secundară -->
+
+    <EditText
+        android:id="@+id/top_edit_text"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:inputType="number"
+        android:ems="9"
+        android:layout_gravity="top|center_horizontal"
+        android:text="1"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2">
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:text="+"/>
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:text="-"/>
+    </GridLayout>
+    <EditText
+        android:id="@+id/down_edit_text"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:enabled="true"
+        android:inputType="number"
+        android:ems="9"
+        android:layout_gravity="top|center_horizontal"
+        android:text="1"/>
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:inputType="number"
+        android:ems="9"
+        android:layout_gravity="top|center_horizontal"
+        android:text="1 + 1 = 2"/>
+
+    <Button
+        android:id="@+id/last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="NAVIGATE TO SECONDART ACTIVITY"/>
+
+</LinearLayout>
